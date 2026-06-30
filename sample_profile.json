@@ -1,0 +1,10 @@
+{
+    "name": "Asha",
+    "age": 21,
+    "monthly_income": 60000,
+    "monthly_expenses": 49000,
+    "monthly_emi": 9000,
+    "current_savings": 100000,
+    "has_health_insurance": true,
+    "life_insurance_cover": 1500000
+}
