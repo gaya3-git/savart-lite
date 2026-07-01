@@ -9,14 +9,13 @@ def calculate_savings_ratio(income, expenses):
 
     surplus = income - expenses
     return round((surplus / income) * 100, 1)
-
-
 def rate_savings_ratio(ratio):
-    """Return a friendly label for the savings ratio."""
 
     if ratio >= SAVINGS_RATIO_HEALTHY:
         return "Healthy"
+
     elif ratio >= SAVINGS_RATIO_OK:
         return "Average"
+
     else:
         return "Poor"
