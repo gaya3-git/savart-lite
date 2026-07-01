@@ -1,0 +1,17 @@
+# Python build/cache files
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# Generated output
+data/*.txt
+data/*.png
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
