@@ -1,25 +1,101 @@
-# day06_lists.py
+# ============================
+# PYTHON LISTS
+# ============================
 
-# Learning Python Lists.
+# Creating a List
+fruits = ["Apple", "Banana", "Orange"]
+print("Original List:", fruits)
 
-expenses = [12000, 8000, 4500, 3000]
+# append() - Adds one item at the end
+fruits.append("Mango")
+print("append():", fruits)
 
-print(expenses)
+# extend() - Adds multiple items
+fruits.extend(["Grapes", "Pineapple"])
+print("extend():", fruits)
 
-print("First expense:", expenses[0])
-print("Second expense:", expenses[1])
-print("Third expense:", expenses[2])
-print("Fourth expense:", expenses[3])
+# insert() - Inserts item at a specific position
+fruits.insert(1, "Kiwi")
+print("insert():", fruits)
 
-print("Number of expenses:", len(expenses))
+# remove() - Removes a specific item
+fruits.remove("Orange")
+print("remove():", fruits)
 
-expenses.append(2500)
+# pop() - Removes item by index
+removed_item = fruits.pop(2)
+print("pop():", fruits)
+print("Removed Item:", removed_item)
 
-print(expenses)
+# index() - Returns index of an item
+print("index():", fruits.index("Kiwi"))
 
-total_expense = sum(expenses)
+# count() - Counts occurrences
+numbers = [1, 2, 3, 2, 2, 5]
+print("count():", numbers.count(2))
 
-print("Total Expense:", total_expense)
+# sort() - Sorts list
+numbers.sort()
+print("sort():", numbers)
 
-print("Highest Expense:", max(expenses))
-print("Lowest Expense:", min(expenses))
+# reverse() - Reverses list
+numbers.reverse()
+print("reverse():", numbers)
+
+# copy() - Creates a copy
+copy_list = fruits.copy()
+print("copy():", copy_list)
+
+# clear() - Removes all items
+temp = [10, 20, 30]
+temp.clear()
+print("clear():", temp)
+
+# len() - Returns length
+print("len():", len(fruits))
+
+print("\n==============================")
+print("PYTHON TUPLES")
+print("==============================")
+
+# Creating Tuple
+tuple_data = (10, 20, 30, 20)
+
+print("Tuple:", tuple_data)
+print("Length:", len(tuple_data))
+print("Index of 30:", tuple_data.index(30))
+print("Count of 20:", tuple_data.count(20))
+
+print("\n==============================")
+print("PYTHON SETS")
+print("==============================")
+
+colors = {"Red", "Green", "Blue"}
+
+print("Original Set:", colors)
+
+# add()
+colors.add("Yellow")
+print("add():", colors)
+
+# update()
+colors.update({"Black", "White"})
+print("update():", colors)
+
+# remove()
+colors.remove("Green")
+print("remove():", colors)
+
+# discard()
+colors.discard("Pink")
+print("discard():", colors)
+
+# pop()
+removed = colors.pop()
+print("pop():", colors)
+print("Removed:", removed)
+
+# clear()
+sample = {"A", "B"}
+sample.clear()
+print("clear():", sample)
