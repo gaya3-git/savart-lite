@@ -1,38 +1,74 @@
-# day08_dictionaries.py
+print("=" * 40)
+print("PYTHON DICTIONARIES")
+print("=" * 40)
 
-# Learning Python Dictionaries.
-
-expenses = {
-    "rent": 12000,
-    "food": 8000,
-    "transport": 4500
-}
-
-print(expenses)
-
-print("Rent is Rs.", expenses["rent"])
-
-expenses["fun"] = 3000
-expenses["food"] = 8500
-
-print(expenses)
-
-total = 0
-
-for category, amount in expenses.items():
-    print(category, "-> Rs.", amount)
-    total = total + amount
-
-print("Total: Rs.", total)
-
-# Safe access using get()
-print("Insurance:", expenses.get("insurance", 0))
-print("Rent:", expenses.get("rent", 0))
-
+# Creating a Dictionary
 student = {
     "name": "Gayathri",
-    "age": 20,
+    "age": 21,
     "branch": "ECE"
 }
-student["cgpa"] = 7.5
-student.get("college", "Not Available")
+
+print("Original Dictionary:")
+print(student)
+
+# Accessing values
+print("\n1. Accessing Values")
+print("Name:", student["name"])
+print("Age:", student["age"])
+
+# get()
+print("\n2. get()")
+print(student.get("branch"))
+print(student.get("college", "Key Not Found"))
+
+# keys()
+print("\n3. keys()")
+print(student.keys())
+
+# values()
+print("\n4. values()")
+print(student.values())
+
+# items()
+print("\n5. items()")
+print(student.items())
+
+# update()
+print("\n6. update()")
+student.update({"age": 22})
+print(student)
+
+# setdefault()
+print("\n7. setdefault()")
+student.setdefault("city", "Chennai")
+print(student)
+
+# pop()
+print("\n8. pop()")
+removed = student.pop("age")
+print("Removed:", removed)
+print(student)
+
+# popitem()
+print("\n9. popitem()")
+last_item = student.popitem()
+print("Removed:", last_item)
+print(student)
+
+# copy()
+print("\n10. copy()")
+student_copy = student.copy()
+print(student_copy)
+
+# clear()
+print("\n11. clear()")
+temp = student.copy()
+temp.clear()
+print(temp)
+
+# Looping through Dictionary
+print("\n12. Loop through Dictionary")
+
+for key, value in student.items():
+    print(key, ":", value)
