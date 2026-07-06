@@ -1,8 +1,17 @@
 from savart_lite.inputs import collect_profile
+from savart_lite.modules.health_score import calculate_health_score
+from savart_lite.reports.text_report import write_report
 
-profile = collect_profile()
 
-print(profile)
-print("Name:", profile["name"])
-print("Age:", profile["age"])
-print("Income:", profile["monthly_income"])
+def main():
+    profile = collect_profile()
+
+    result = calculate_health_score(profile)
+
+    write_report(profile, result)
+
+    print("\nFinancial Health Check Completed Successfully!")
+
+
+if __name__ == "__main__":
+    main()
