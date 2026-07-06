@@ -31,3 +31,28 @@ def save_pie_chart(profile):
     print(f"Pie chart saved successfully: {filename}")
 
     return filename
+
+
+def save_bar_chart(result):
+    labels = ["Savings", "Emergency", "Insurance", "Debt"]
+    scores = [
+        result["savings"],
+        result["emergency"],
+        result["insurance"],
+        result["debt"],
+    ]
+
+    plt.figure(figsize=(6, 4))
+    plt.bar(labels, scores)
+
+    plt.title("Financial Health Score Breakdown")
+    plt.xlabel("Categories")
+    plt.ylabel("Score")
+
+    filename = "data/bar_chart.png"
+    plt.savefig(filename)
+    plt.close()
+
+    print(f"Bar chart saved successfully: {filename}")
+
+    return filename
